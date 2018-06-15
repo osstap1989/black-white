@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="description" content="Шаблоны сайтов бесплатно, дизайн сайта бесплатно, адаптивный дизайн">
     <meta name="keywords" content="Шаблоны сайтов бесплатно, дизайн сайта бесплатно, адаптивный дизайн">
-    <link rel="stylesheet" href="style.css">
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('../assets/css/style.css') }}"/>
     <title>Бесплатные шаблоны сайтов</title>
+    {% endblock %}
 </head>
 <body>
 <div class="wrapper">
