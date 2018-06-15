@@ -16,4 +16,14 @@ class BaseController extends Controller
             'controller_name' => 'BaseController',
         ]);
     }
+    /**
+     * @Route("/contacts", name="contacts")
+     */
+
+    public function contacts()
+    {
+        return $this->render('contacts.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
 }

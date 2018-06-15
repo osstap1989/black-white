@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% block head %}
     <meta charset="utf-8">
-    <meta name="description" content="Шаблоны сайтов бесплатно, дизайн сайта бесплатно, адаптивный дизайн">
-    <meta name="keywords" content="Шаблоны сайтов бесплатно, дизайн сайта бесплатно, адаптивный дизайн">
-    {% block stylesheets %}
+    <meta name="description" content="Lviv 1256">
+    <meta name="keywords" content="Lviv 1256">
+    {% block stylesheet %}
     <link rel="stylesheet" href="{{ asset('../assets/css/style.css') }}"/>
-    <title>Бесплатные шаблоны сайтов</title>
-    {% endblock %}
+    {% endblock stylesheet %}
+    <title>Lviv 1256</title>
+    {% endblock head %}
 </head>
+{% block content %}
 <body>
 <div class="wrapper">
     <!--Шапка-->
@@ -143,8 +146,10 @@
         </div>
     </div>
     <!--Подвал-->
+    {% block footer %}
     <div class="footer">
         <p>&copy; Footer content <a href="http://psd-html-css.ru">Link footer</a></p>
+        {% endblock footer %}
     </div>
 </div>
 <!--Подключение скриптов-->
@@ -153,4 +158,5 @@
 <script src="js/bootstrap-carousel.js"></script>
 <script src="js/js.js"></script>
 </body>
+{% endblock content %}
 </html>
